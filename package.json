@@ -1,7 +1,7 @@
 {
   "name": "ahj-collapse",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maria-namira/ahj-collapse.git"
@@ -9,8 +9,11 @@
   "author": "Maria",
   "license": "MIT",
   "scripts": {
-      "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-      "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+     "start": "webpack serve --open 'google-chrome'",
+        "watch": "webpack --watch",
+        "prod": "NODE_ENV=production webpack",
+        "dev": "webpack",
+    "build-prod": "parcel build src/index.html",
       "lint": "eslint .",
       "test": "jest --testPathPattern=./src/",
       "coverage": "jest --coverage",
