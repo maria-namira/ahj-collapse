@@ -9,8 +9,10 @@
   "author": "Maria",
   "license": "MIT",
   "scripts": {
-      "build": "webpack --config config/webpack.prod.js",
-      "start": "webpack serve --config config/webpack.dev.js",
+     "start": "webpack serve --open 'google-chrome'",
+        "watch": "webpack --watch",
+        "prod": "NODE_ENV=production webpack",
+        "dev": "webpack",
       "lint": "eslint .",
       "test": "jest --testPathPattern=./src/",
       "coverage": "jest --coverage",
