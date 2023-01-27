@@ -1,4 +1,29 @@
 {
+  "name": "ahj-collapse",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maria-namira/ahj-collapse.git"
+  },
+  "author": "Maria",
+  "license": "MIT",
+    "scripts": {
+    "dev": "webpack serve",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "test": "jest --testPathPattern=./src/",
+    "coverage": "jest --coverage",
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+  },
   "devDependencies": {
     "eslint": "^8.32.0",
     "eslint-plugin-react": "^7.32.1"
@@ -6,12 +31,10 @@
   "dependencies": {
     "cli": "^1.0.1",
     "core-js": "^3.27.2"
-  }
-"scripts": {
-  "predeploy": "npm run build", 
-  "deploy": "gh-pages -d build",
-  "clean": "rm dist/bundle.js", 
-    "start": "react-scripts start", 
-  "build-prod": "parcel build src/index.html"
-}
+  },
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/maria-namira/ahj-collapse/issues"
+  },
+  "homepage": "https://github.com/maria-namira/ahj-collapse#readme"
 }
