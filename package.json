@@ -9,20 +9,13 @@
   "author": "Maria",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
-    "start": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config=Scripts/config/webpack.prod.js",
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "coverage": "jest --coverage",
-    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
-    "doc": "jsdoc -c jsdoc.conf.json",
-    "preshow:coverage": "npm run coverage",
-    "show:coverage": "live-server coverage/lcov-report",
-    "preshow:doc": "npm run doc",
-    "show:doc": "live-server doc",
-    "preshow:dist": "npm run build",
-    "show:dist": "live-server dist"
+      "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+      "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+      "lint": "eslint .",
+      "test": "jest --testPathPattern=./src/",
+      "coverage": "jest --coverage",
+      "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+      "doc": "jsdoc -c jsdoc.conf.json"
   },
   "devDependencies": {
     "eslint": "^8.32.0",
@@ -32,7 +25,9 @@
   },
   "dependencies": {
     "cli": "^1.0.1",
-    "core-js": "^3.27.2"
+    "core-js": "^3.27.2",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0"
   },
   "description": "",
   "bugs": {
