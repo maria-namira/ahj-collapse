@@ -13,6 +13,7 @@
         "watch": "webpack --watch",
         "prod": "NODE_ENV=production webpack",
         "dev": "webpack",
+    "build-prod": "parcel build src/index.html",
       "lint": "eslint .",
       "test": "jest --testPathPattern=./src/",
       "coverage": "jest --coverage",
