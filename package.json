@@ -1,0 +1,40 @@
+{
+  "name": "ahj-collapse",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maria-namira/ahj-collapse.git"
+  },
+  "author": "Maria",
+  "license": "MIT",
+  "scripts": {
+     "start": "webpack serve --open 'google-chrome'",
+        "watch": "webpack --watch",
+        "prod": "NODE_ENV=production webpack",
+        "dev": "webpack",
+    "build-prod": "parcel build src/index.html",
+      "lint": "eslint .",
+      "test": "jest --testPathPattern=./src/",
+      "coverage": "jest --coverage",
+      "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+      "doc": "jsdoc -c jsdoc.conf.json"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "core-js": "^3.27.2",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0"
+  },
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/maria-namira/ahj-collapse/issues"
+  },
+  "homepage": "https://github.com/maria-namira/ahj-collapse#readme"
+}
