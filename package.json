@@ -10,15 +10,20 @@
   "license": "MIT",
   "scripts": {
      "start": "webpack serve --config webpack.dev.js",
-        "watch": "webpack --watch",
+     "watch": "webpack --watch",
         "prod": "NODE_ENV=production webpack",
-        "dev": "webpack serve",
+     "dev": "webpack serve",
     "build-prod": "parcel build src/index.html",
       "lint": "eslint .",
       "test": "jest --testPathPattern=./src/",
       "coverage": "jest --coverage",
       "e2e": "jest --testPathPattern=./e2e/ --runInBand",
-      "doc": "jsdoc -c jsdoc.conf.json"
+      "doc": "jsdoc -c jsdoc.conf.json",
+     "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+    
   },
   "devDependencies": {
     "eslint": "^8.32.0",
