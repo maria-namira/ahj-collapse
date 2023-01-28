@@ -9,10 +9,10 @@
   "author": "Maria",
   "license": "MIT",
   "scripts": {
-     "start": "webpack serve --open 'google-chrome'",
+     "start": "webpack serve --config webpack.dev.js",
         "watch": "webpack --watch",
         "prod": "NODE_ENV=production webpack",
-        "dev": "webpack",
+        "dev": "webpack serve",
     "build-prod": "parcel build src/index.html",
       "lint": "eslint .",
       "test": "jest --testPathPattern=./src/",
