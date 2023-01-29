@@ -1,6 +1,6 @@
-@import "vars.css";
-@import "mixins.css";
-@import "null.css";
+import "vars.css";
+import "mixins.css";
+import "null.css";
 
 #root {
   width: 100%;
